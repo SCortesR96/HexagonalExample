@@ -15,7 +15,6 @@ export class ProductsComponent {
   service: ProductUiService = inject(ProductUiService);
   response: ProductResponse[] = [];
 
-
   constructor() {
     this.index();
   }
