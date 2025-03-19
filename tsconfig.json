@@ -2,6 +2,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": ".",
     "outDir": "./dist/out-tsc",
     "strict": true,
     "noImplicitOverride": true,
@@ -18,10 +19,21 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
-    "lib": [
-      "ES2022",
-      "dom"
-    ]
+    "lib": ["ES2022", "dom"],
+    "paths": {
+      // @Environments
+      "@environments/*": ["src/environments/*"],
+
+      // @app
+      "@app/*": ["src/app/*"],
+      "@app/modules/*": ["src/app/modules/*"],
+
+      // @Modules - Products
+      "@products/*": ["src/app/modules/products/*"],
+      "@products/core/*": ["src/app/modules/products/core/*"],
+      "@products/infrastructure/*": ["src/app/modules/products/infrastructure/*"],
+      "@products/ui/*": ["src/app/modules/products/ui/*"],
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
