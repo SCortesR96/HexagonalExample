@@ -30,6 +30,24 @@ module.exports = tseslint.config(
           style: 'kebab-case',
         },
       ],
+
+      '@typescript-eslint/explicit-function-return-type': 'error',
+      '@typescript-eslint/no-explicit-any': 'error',
+      'prefer-const': 'error',
+      'no-console': 'error',
+      'max-len': ['error', { code: 120 }],
+      eqeqeq: ['error', 'always'],
+      'no-unused-vars': [
+        'error',
+        {
+          vars: 'all',
+          args: 'none',
+          // ingnore enum values
+          varsIgnorePattern: '^_',
+        },
+      ],
+      '@typescript-eslint/no-empty-function': 'error',
+      '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
     },
   },
   {
