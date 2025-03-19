@@ -26,6 +26,8 @@
 
       // @app
       "@app/*": ["src/app/*"],
+      "@core/*": ["src/app/core/*"],
+      "@utils/*": ["src/app/utils/*"],
       "@app/modules/*": ["src/app/modules/*"],
 
       // @Modules - Products
