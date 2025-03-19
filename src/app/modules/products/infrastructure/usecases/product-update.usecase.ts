@@ -10,10 +10,10 @@ import { ProductPort } from '@app/modules/products/infrastructure/ports/product.
 @Injectable({
   providedIn: 'root',
 })
-export class ProductUpdateUsecase implements Usecase<{ id: number, body: ProductUpdateDto }, boolean> {
+export class ProductUpdateUsecase implements Usecase<{ id: number; body: ProductUpdateDto }, boolean> {
   repository: ProductPort = inject(ProductPort);
 
-  execute(params: { id: number, body: ProductUpdateDto }): Observable<IHttpResponse<boolean>> {
+  execute(params: { id: number; body: ProductUpdateDto }): Observable<IHttpResponse<boolean>> {
     return this.repository.update(params.id, params.body);
   }
 }

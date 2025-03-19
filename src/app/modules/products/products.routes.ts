@@ -6,6 +6,6 @@ import { ProductsComponent } from '@products/ui/pages/products/products.componen
 export default [
   {
     path: '',
-    component: ProductsComponent
+    component: ProductsComponent,
   },
 ] as Routes;

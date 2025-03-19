@@ -9,22 +9,21 @@ import { ProductBackResponse } from '@app/modules/products/core/models/response/
 import { ProductSource } from './product.source';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ProductService implements ProductSource {
-
   index(): Observable<IHttpResponse<ProductBackResponse[]>> {
     const response: IHttpResponse<ProductBackResponse[]> = {
       status: 'success',
       message: 'Products loaded successfully!',
-      data: products
+      data: products,
     };
 
     return of(response);
   }
 
   show(id: number): Observable<IHttpResponse<ProductBackResponse>> {
-    const product = products.find(p => p.id === id);
+    const product = products.find((p) => p.id === id);
     if (!product) {
       return of({
         status: 'error',
@@ -34,14 +33,14 @@ export class ProductService implements ProductSource {
           productName: '',
           productPrice: 0,
           productStock: 0,
-          productDescription: ''
-        }
+          productDescription: '',
+        },
       });
     }
     return of({
       status: 'success',
       message: 'Product found successfully!',
-      data: product
+      data: product,
     });
   }
 
@@ -51,7 +50,7 @@ export class ProductService implements ProductSource {
       productName: body.name,
       productPrice: body.price,
       productStock: body.stock,
-      productDescription: body.description
+      productDescription: body.description,
     };
 
     products.push(newProduct);
@@ -59,17 +58,17 @@ export class ProductService implements ProductSource {
     return of({
       status: 'success',
       message: 'Product created successfully!',
-      data: true
+      data: true,
     });
   }
 
   update(id: number, body: ProductUpdateDto): Observable<IHttpResponse<boolean>> {
-    const index = products.findIndex(p => p.id === id);
+    const index = products.findIndex((p) => p.id === id);
     if (index === -1) {
       return of({
         status: 'error',
         message: `Product with ID ${id} not found`,
-        data: false
+        data: false,
       });
     }
 
@@ -77,17 +76,17 @@ export class ProductService implements ProductSource {
     return of({
       status: 'success',
       message: 'Product updated successfully!',
-      data: true
+      data: true,
     });
   }
 
   delete(id: number): Observable<IHttpResponse<boolean>> {
-    const index = products.findIndex(p => p.id === id);
+    const index = products.findIndex((p) => p.id === id);
     if (index === -1) {
       return of({
         status: 'error',
         message: `Product with ID ${id} not found`,
-        data: false
+        data: false,
       });
     }
 
@@ -95,16 +94,14 @@ export class ProductService implements ProductSource {
     return of({
       status: 'success',
       message: 'Product deleted successfully!',
-      data: true
+      data: true,
     });
   }
 
   private generateId(): number {
-    return products.length ? Math.max(...products.map(p => p.id)) + 1 : 1;
+    return products.length ? Math.max(...products.map((p) => p.id)) + 1 : 1;
   }
 }
-
-
 
 const products: ProductBackResponse[] = [
   {

@@ -8,7 +8,7 @@ import { ProductUiService } from '@products/ui/services/product-ui.service';
   standalone: true,
   imports: [],
   templateUrl: './products.component.html',
-  styleUrl: './products.component.css'
+  styleUrl: './products.component.css',
 })
 export class ProductsComponent {
   service: ProductUiService = inject(ProductUiService);
@@ -21,7 +21,7 @@ export class ProductsComponent {
     this.service.index().subscribe({
       next: (response) => {
         console.log(response);
-      }
+      },
     });
   }
 }

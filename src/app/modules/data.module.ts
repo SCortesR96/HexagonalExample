@@ -1,5 +1,3 @@
-import { ProductModule } from "./products/product.module";
+import { ProductModule } from './products/product.module';
 
-export const DataModule = [
-  ProductModule
-];
+export const DataModule = [ProductModule];

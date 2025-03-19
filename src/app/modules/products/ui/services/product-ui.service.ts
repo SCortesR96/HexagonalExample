@@ -10,10 +10,9 @@ import { ProductStoreUsecase } from '@products/infrastructure/usecases/product-s
 import { ProductUpdateUsecase } from '@products/infrastructure/usecases/product-update.usecase';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ProductUiService {
-
   private readonly _indexUsecase: ProductIndexUsecase = inject(ProductIndexUsecase);
   private readonly _storeUsecase: ProductStoreUsecase = inject(ProductStoreUsecase);
   private readonly _showUsecase: ProductShowUsecase = inject(ProductShowUsecase);

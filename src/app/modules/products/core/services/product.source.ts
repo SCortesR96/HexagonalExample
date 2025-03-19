@@ -1,9 +1,9 @@
-import { Observable } from "rxjs";
+import { Observable } from 'rxjs';
 
 // Project
-import { IHttpResponse } from "@app/core/base/response";
-import { ProductStoreDto } from "@app/modules/products/core/models/dto/product-store.dto";
-import { ProductUpdateDto } from "@app/modules/products/core/models/dto/product-update.dto";
+import { IHttpResponse } from '@app/core/base/response';
+import { ProductStoreDto } from '@app/modules/products/core/models/dto/product-store.dto';
+import { ProductUpdateDto } from '@app/modules/products/core/models/dto/product-update.dto';
 import { ProductBackResponse } from '@app/modules/products/core/models/response/product.back.response';
 
 export abstract class ProductSource {
