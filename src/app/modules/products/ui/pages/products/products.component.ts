@@ -24,8 +24,8 @@ export class ProductsComponent implements OnInit {
         // eslint-disable-next-line no-console
         console.log('data :>>> ', value);
         this.products = value?.products?.data || [];
-      }
-    })
+      },
+    });
   }
 }
 

@@ -13,5 +13,5 @@ export class RouteService {
     store: RouteConfig.mockProducts(),
     update: (id: number): string => RouteConfig.mockProducts(`${id}`),
     delete: (id: number): string => RouteConfig.mockProducts(`${id}`),
-  }
+  };
 }

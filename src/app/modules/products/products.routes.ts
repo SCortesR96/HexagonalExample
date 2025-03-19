@@ -10,6 +10,6 @@ export default [
     component: ProductsComponent,
     resolve: {
       products: productsResolver,
-    }
+    },
   },
 ] as Routes;
