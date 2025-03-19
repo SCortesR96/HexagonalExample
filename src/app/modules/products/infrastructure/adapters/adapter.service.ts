@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 // Project
-import { IHttpResponse } from "@app/core/base/response";
+import { IHttpResponse } from '@app/core/base/response';
 import { ProductBackResponse } from '@app/modules/products/core/models/response/product.back.response';
 import { ProductResponse } from '@app/modules/products/core/models/response/product.response';
 
@@ -18,7 +18,7 @@ export class AdapterService {
       name: response.productName,
       price: response.productPrice,
       stock: response.productStock,
-      description: response.productDescription
+      description: response.productDescription,
     };
   }
 

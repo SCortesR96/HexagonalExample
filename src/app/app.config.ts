@@ -6,10 +6,5 @@ import { DataModule } from './modules/data.module';
 import { provideHttpClient } from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {
-  providers: [
-    provideRouter(routes),
-    provideHttpClient(),
-
-    DataModule
-  ],
+  providers: [provideRouter(routes), provideHttpClient(), DataModule],
 };

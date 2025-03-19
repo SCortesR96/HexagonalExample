@@ -1,14 +1,14 @@
-import { inject } from "@angular/core";
-import { map, Observable } from "rxjs";
+import { inject } from '@angular/core';
+import { map, Observable } from 'rxjs';
 
 // Project
-import { IHttpResponse } from "@app/core/base/response";
-import { ProductPort } from "@app/modules/products/infrastructure/ports/product.port";
+import { IHttpResponse } from '@app/core/base/response';
+import { ProductPort } from '@app/modules/products/infrastructure/ports/product.port';
 import { ProductStoreDto } from '@app/modules/products/core/models/dto/product-store.dto';
 import { ProductUpdateDto } from '@app/modules/products/core/models/dto/product-update.dto';
 import { ProductResponse } from '@app/modules/products/core/models/response/product.response';
-import { ProductSource } from "@products/core/services/product.source";
-import { AdapterService } from "@products/infrastructure/adapters/adapter.service";
+import { ProductSource } from '@products/core/services/product.source';
+import { AdapterService } from '@products/infrastructure/adapters/adapter.service';
 
 export class ProductRepository implements ProductPort {
   service: ProductSource = inject(ProductSource);

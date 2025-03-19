@@ -32,7 +32,7 @@
       "@products/*": ["src/app/modules/products/*"],
       "@products/core/*": ["src/app/modules/products/core/*"],
       "@products/infrastructure/*": ["src/app/modules/products/infrastructure/*"],
-      "@products/ui/*": ["src/app/modules/products/ui/*"],
+      "@products/ui/*": ["src/app/modules/products/ui/*"]
     }
   },
   "angularCompilerOptions": {
