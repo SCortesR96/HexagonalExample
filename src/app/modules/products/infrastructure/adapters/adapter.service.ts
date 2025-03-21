@@ -14,8 +14,9 @@ export class AdapterService {
    */
   mapToProductModel(response: ProductBackResponse): ProductResponse {
     return {
-      id: response.id,
+      id: response.productId,
       name: response.productName,
+      rate: response.productRate,
       price: response.productPrice,
       stock: response.productStock,
       description: response.productDescription,

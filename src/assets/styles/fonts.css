@@ -1,0 +1,62 @@
+/* Titles */
+.title-xl {
+  @apply text-4xl font-bold;
+}
+
+.title-lg {
+  @apply text-3xl font-bold;
+}
+
+.title-md {
+  @apply text-2xl font-bold;
+}
+
+.title-sm {
+  @apply text-xl font-bold;
+}
+
+.title-xs {
+  @apply text-lg font-bold;
+}
+
+/* Labels */
+.label-xl {
+  @apply text-lg font-medium;
+}
+
+.label-lg {
+  @apply text-base font-medium;
+}
+
+.label-md {
+  @apply text-sm font-medium;
+}
+
+.label-sm {
+  @apply text-xs font-medium;
+}
+
+.label-xs {
+  @apply text-[10px] font-medium;
+}
+
+/* Subtitle */
+.subtitle-xl {
+  @apply text-2xl font-semibold;
+}
+
+.subtitle-lg {
+  @apply text-xl font-semibold;
+}
+
+.subtitle-md {
+  @apply text-lg font-semibold;
+}
+
+.subtitle-sm {
+  @apply text-base font-semibold;
+}
+
+.subtitle-xs {
+  @apply text-sm font-semibold;
+}
