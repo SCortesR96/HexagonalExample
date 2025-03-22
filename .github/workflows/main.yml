@@ -39,6 +39,6 @@ jobs:
       - name: Depoy to the Page
         uses: crazy-max/ghaction-github-pages@v4.1.0
         with:
-          build_dir: dist/
+          build_dir: dist/browser/
         env:
           GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
