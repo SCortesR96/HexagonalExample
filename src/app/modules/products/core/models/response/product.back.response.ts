@@ -1,6 +1,7 @@
 export interface ProductBackResponse {
-  id: number;
+  productId: number;
   productName: string;
+  productRate: number;
   productPrice: number;
   productStock: number;
   productDescription: string;

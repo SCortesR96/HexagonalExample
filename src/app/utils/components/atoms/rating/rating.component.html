@@ -1,0 +1,7 @@
+<p-rating
+  [(ngModel)]="rating"
+  [cancel]="isCancelEnabled"
+  [stars]="maxStars"
+  [readonly]="readOnly"
+  (onRate)="handleOnRate($event)"
+/>
