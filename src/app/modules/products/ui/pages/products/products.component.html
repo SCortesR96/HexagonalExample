@@ -1,10 +1,55 @@
-<p>products works!</p>
+<admin-layout>
+  <h1 class="text-3xl font-bold underline">products works!</h1>
 
-<div>
-  @for (product of products; track $index) {
-    <span>{{ product.name }}</span>
-    <span>{{ product.price }}</span>
-    <p>{{ product.description }}</p>
-    <hr />
-  }
-</div>
+  <div class="">
+    @for (product of products; track $index) {
+      <div class="flex gap-x-6">
+        <atom-image [classes]="'w-32'" />
+        <div class="flex flex-col">
+          <molecule-label-info-field
+            [infoText]="'Product: '"
+            [infoClasses]="'subtitle-md text-primary-700  flex items-center gap-2'"
+            [infoIcon]="'shopping-bag'"
+            [infoIsLeftIcon]="true"
+            [fieldText]="product.name"
+            [fieldClasses]="'label-md text-secondary-900'"
+          />
+          <molecule-label-info-field
+            [infoText]="'Price: '"
+            [infoClasses]="'subtitle-md text-primary-700'"
+            [infoIcon]="'money-bill'"
+            [infoIsLeftIcon]="true"
+            [fieldText]="currency(product.price)"
+            [fieldClasses]="'label-md text-secondary-900'"
+          />
+          <molecule-label-info-field
+            [infoText]="'Stock: '"
+            [infoClasses]="'subtitle-md text-primary-700'"
+            [infoIcon]="'box'"
+            [infoIsLeftIcon]="true"
+            [fieldText]="product.stock + ''"
+            [fieldClasses]="'label-md text-secondary-900'"
+          />
+          <molecule-label-rating
+            [labelText]="'Stock: '"
+            [labelClasses]="'subtitle-md text-primary-700'"
+            [labelIcon]="'star'"
+            [labelIsLeftIcon]="true"
+            [rating]="product.rate"
+            [maxStars]="5"
+            [readOnly]="true"
+          />
+          <molecule-label-info-field
+            [infoText]="'Description: '"
+            [infoClasses]="'subtitle-md text-primary-700 flex items-center gap-2'"
+            [infoIcon]="'box'"
+            [infoIsLeftIcon]="true"
+            [fieldText]="product.description"
+            [fieldClasses]="'label-md line-clamp-1'"
+          />
+        </div>
+      </div>
+      <hr />
+    }
+  </div>
+</admin-layout>

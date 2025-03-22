@@ -6,7 +6,11 @@ export const routes: Routes = [
     loadChildren: () => import('./modules/products/products.routes'),
   },
   {
+    path: 'documentation',
+    loadChildren: () => import('./modules/documentation/documentation.routes'),
+  },
+  {
     path: '**',
-    redirectTo: 'products',
+    redirectTo: 'documentation',
   },
 ];

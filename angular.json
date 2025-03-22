@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Products": {
+    "HexagonalExample": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -19,7 +19,7 @@
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.css"],
+            "styles": ["src/styles.css", "src/assets/styles/menu.css", "src/assets/styles/fonts.css"],
             "scripts": []
           },
           "configurations": {
@@ -56,10 +56,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Products:build:production"
+              "buildTarget": "HexagonalExample:build:production"
             },
             "development": {
-              "buildTarget": "Products:build:development"
+              "buildTarget": "HexagonalExample:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -67,7 +67,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "Products:build"
+            "buildTarget": "HexagonalExample:build"
           }
         },
         "test": {
