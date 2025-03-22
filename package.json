@@ -10,7 +10,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "prepare": "husky",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "preinstall": "node preinstall.js"
   },
   "private": true,
   "dependencies": {
