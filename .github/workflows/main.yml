@@ -35,6 +35,9 @@ jobs:
       # Build app for Production
       - name: Build app bundle
         run: npm run build:prod
+      # Rename Index.html
+      - name: Rename Index.html
+        run: mv dist/browser/index.html dist/browser/404.html
       # Deploy to Github Pages
       - name: Depoy to the Page
         uses: crazy-max/ghaction-github-pages@v4.1.0
